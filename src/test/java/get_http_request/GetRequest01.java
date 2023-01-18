@@ -10,6 +10,9 @@ import static io.restassured.RestAssured.given;
 //poma json - junit ve rest-assured yüklemek yeterli. Bunun sebebi api de userface bir işlem yok.
 //kullanıcının görmesi gereken bir işlem olmadıgı için webdriver, bonigarcia gibi bir dependencies
 //yüklememize gerek yok.
+
+//===> postman manuel olarak test yapmamı saglar.
+//===>önce postman de manuel testimi yapar sonra ide me gidip automation testimi yaparım.
 public class GetRequest01 {
     @Test
     public void test01(){
