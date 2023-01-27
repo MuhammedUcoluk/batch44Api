@@ -11,8 +11,8 @@ public class HerOkuAppTestData {
         bookingdates.put("checkout","2019-01-01");
 
         HashMap<String,Object> expectedData=new HashMap<>();
-        expectedData.put("firstname","John");
-        expectedData.put("lastname","Smith");
+        expectedData.put("firstname","Josh");
+        expectedData.put("lastname","Allen");
         expectedData.put("totalprice",111);
         expectedData.put("depositpaid",true);
         expectedData.put("bookingdates",bookingdates);

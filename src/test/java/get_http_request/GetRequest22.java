@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
@@ -53,8 +54,9 @@ public class GetRequest22 extends HerOkuAppBaseUrl {
         assertEquals(expectedData.get("lastname"),json.getString("lastname"));
         assertEquals(expectedData.get("totalprice"),json.getInt("totalprice"));
         assertEquals(expectedData.get("depositpaid"),json.getBoolean("depositpaid"));
-        assertEquals(expectedData.get("checkin"),json.getString("checkin"));
-        assertEquals(expectedData.get("checkout"),json.getString("checkout"));
+        assertEquals(((Map)expectedData.get("bookingdates")).get("checkin"),json.getString("bookingdates.checkin"));
+        assertEquals(((Map)expectedData.get("bookingdates")).get("checkout"),json.getString("bookingdates.checkout"));
+
 
         //De Serialization ile
         HashMap<String,Object> actualData=response.as(HashMap.class);
@@ -64,8 +66,9 @@ public class GetRequest22 extends HerOkuAppBaseUrl {
         assertEquals(expectedData.get("lastname"),actualData.get("lastname"));
         assertEquals(expectedData.get("totalprice"),actualData.get("totalprice"));
         assertEquals(expectedData.get("depositpaid"),actualData.get("depositpaid"));
-        assertEquals(expectedData.get("checkin"),actualData.get("checkin"));
-        assertEquals(expectedData.get("checkout"),actualData.get("checkout"));
+        assertEquals(((Map)expectedData.get("bookingdates")).get("checkin"),((Map)actualData.get("bookingdates")).get("checkin"));
+        assertEquals(((Map)expectedData.get("bookingdates")).get("checkout"),((Map)actualData.get("bookingdates")).get("checkout"));
+
 
     }
 }
