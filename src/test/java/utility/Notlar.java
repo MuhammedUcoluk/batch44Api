@@ -6,8 +6,9 @@ public class Notlar {
     b)assertThat()
     c)Json Path
     d)Matchers class
-    e)
-    f)
+    e)De-Serialization
+        HashMap<String,Object> actualData=response.as(HashMap.class);
+    f)Json Object
     g)
     h)
     ===========Matchers============
