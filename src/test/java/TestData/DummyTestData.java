@@ -47,4 +47,23 @@ public class DummyTestData {
 
         return expectedData;
     }
+    public HashMap<String ,Object> setUpRequestBody(){
+        HashMap<String ,Object> requestBody=new HashMap<>();
+        requestBody.put("name","Ali Can");
+        requestBody.put("salary","2000");
+        requestBody.put("age","40");
+
+        return requestBody;
+
+    }
+    public HashMap<String,Object> SetUpexpectedData(){
+
+        HashMap<String,Object>expectedData=new HashMap<>();
+        expectedData.put("statusCode","200");
+        expectedData.put("status","success");
+        expectedData.put("message","Successfully! Record has been added");
+
+        return expectedData;
+
+    }
 }
